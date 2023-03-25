@@ -1,5 +1,8 @@
+# Earthquake Visualization with Leaflet
+### leaflet-challenge: Module 15
 
-# leaflet-challenge: Module 15
+![USGS](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/USGS_logo.svg/1280px-USGS_logo.svg.png)
+
 ## Intro
 The United States Geological Survey, or USGS for short, is responsible for providing scientific data about natural hazards, the health of our ecosystems and environment, and the impacts of climate and land-use change. Their scientists develop new methods and tools to supply timely, relevant, and useful information about the Earth and its processes.
 
