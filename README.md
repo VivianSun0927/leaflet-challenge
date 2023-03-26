@@ -8,7 +8,7 @@ The United States Geological Survey, or USGS for short, is responsible for provi
 
 The USGS is interested in building a new set of tools that will allow them to visualize their earthquake data. They collect a massive amount of data from all over the world each day, but they lack a meaningful way of displaying it. In this challenge, you have been tasked with developing a way to visualize USGS data that will allow them to better educate the public and other government organizations (and hopefully secure more funding) on issues facing our planet.
 
-![quakemap](https://static.bc-edx.com/data/dl-1-2/m15/lms/img/2-BasicMap.jpg)
+![quakemap](file:///C:/Users/mochi/OneDrive/Desktop/quakemap.png)
 
 The instructions for this activity are broken into two parts:
 
