@@ -2,7 +2,7 @@
 var queryURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
 
-// Perform a GET request to the query URL
+// Use D3 to retrieve the earthquake data
 d3.json(queryURL).then(function(data){
     // Route data.features object to the createFeatures function.
     createFeatures(data.features);
@@ -16,7 +16,7 @@ function createFeatures(earthquakeData, platesData){
         layer.bindPopup(`<h3>Where: ${feature.properties.place}</h3><hr><p>Time: ${new Date(feature.properties.time)}</p><hr><p>Magnitude: ${feature.properties.mag}</p><hr><p>Number of "Felt" Reports: ${feature.properties.felt}`);
     }
 
-    // Create a GeoJSON layer containing the features array on the earthquakeData object
+    // Create a circle marker for the earthquake based on the lat/lon 
     function createCircleMarker(feature, latlng){
        let options = {
         radius:feature.properties.mag*5,
@@ -28,7 +28,6 @@ function createFeatures(earthquakeData, platesData){
        } 
        return L.circleMarker(latlng,options);
     }
-    // Create a variable for earthquakes to house latlng, each feature for popup, and cicrle radius/color/weight/opacity
     let earthquakes = L.geoJSON(earthquakeData, {
         onEachFeature: onEachFeature,
         pointToLayer: createCircleMarker
@@ -105,7 +104,7 @@ function createMap(earthquakes) {
     Earthquakes: earthquakes
   };
 
-  // Create our map, giving it the streetmap and earthquakes layers to display on load
+  // Create a Leaflet map centered on the United States
   let myMap = L.map("map", {
     center: [
       39.8282, -98.5795
