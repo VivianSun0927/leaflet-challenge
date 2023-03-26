@@ -41,15 +41,15 @@ function createFeatures(earthquakeData, platesData){
 function chooseColor(mag){
     switch(true){
         case(1.0 <= mag && mag <= 2.5):
-            return "#0071BC"; // Strong blue
+            return "#9DC813"; 
         case (2.5 <= mag && mag <=4.0):
-            return "#35BC00";
+            return "#FCD12A";
         case (4.0 <= mag && mag <=5.5):
-            return "#BCBC00";
+            return "#F9812A";
         case (5.5 <= mag && mag <= 8.0):
-            return "#BC3500";
+            return "#B5338A";
         case (8.0 <= mag && mag <=20.0):
-            return "#BC0000";
+            return "#702963";
         default:
             return "#E2FFAE";
     }
